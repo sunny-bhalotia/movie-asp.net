@@ -1,0 +1,47 @@
+﻿
+.rbuttons{
+    font-size:29px;
+    padding:10px;
+    margin:10px;
+    font-family:'Times New Roman';
+}
+
+.rbuttons2{
+    margin-left:10px;
+    font-size:29px;
+    font-family:'Open Sans';
+    background-color:lightgreen;
+    color:white;
+}
+
+.rlabels{
+    font-size:20px;
+    color:red;
+    font-family:'Microsoft Sans Serif';
+}
+
+.maindiv{
+    width:100%;
+    padding-top:100px;
+}
+
+.childiv{
+    
+   width:25%;
+   margin:0px auto;
+}
+
+.childiv1{
+    position:absolute;
+   left:1050px;
+   top:120px;
+   float:right;
+   width:300px;
+   height:500px; 
+}
+
+
+
+.rcalendar{
+    margin-left:10px;
+}
