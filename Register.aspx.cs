@@ -15,8 +15,7 @@ public partial class Register : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         conString=WebConfigurationManager.ConnectionStrings["Pubs"].ConnectionString;
-        
-    }
+         }
 
     protected void TextBox3_TextChanged(object sender, EventArgs e)
     {

@@ -4,15 +4,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+ <title>Movie Baazar</title>
+                <link runat="server" rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+                <link runat="server" rel="icon" href="favicon.ico" type="image/ico"/>
 </head>
 
 <body><link href="FirstPageCss.css" rel="stylesheet" />
     <form id="form1" runat="server">
-    <div>
+    <div >
+    <div  class="header">
+        <asp:TextBox ID="TextBox1" runat="server" Width="305px" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+         <asp:Button ID="Button1" runat="server" Text="Button" />
     
-    <div><asp:TextBox ID="TextBox1" runat="server" Width="305px" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" Text="Button" />
         </div>
         <div class="gridiv">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 

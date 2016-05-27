@@ -7,6 +7,30 @@
     <link href="RegisterCSS.css" rel="stylesheet" />
     <title></title>
 </head>
+
+    <script type="text/javascript">
+    function tSpeedValue(txt)
+    {
+        var pas1 = document.getElementsByName('TextBox5')[0].value;
+        var pas2 = document.getElementsByName('TextBox6')[0].value;
+       // alert(pas1);
+        //alert(pas2);
+        if (txt.value == pas1)
+        {
+            document.getElementById('Label2').innerHTML = '';
+            document.getElementById("Label2").style.display = "none";
+           // alert("hi");
+        }            
+        else {
+            document.getElementById('Label2').innerHTML = 'Passwords do not match';
+
+            document.getElementById("Label2").style.display = "block";
+        }
+        
+
+    }
+    </script>
+
 <body>
     <form id="form1" runat="server">
         <div class="maindiv">
@@ -24,9 +48,11 @@
         <br />
         <asp:TextBox ID="TextBox5" runat="server" placeholder="Password" CssClass="rbuttons" TextMode="password" Width="296px"></asp:TextBox>
         <br />
-        <asp:TextBox ID="TextBox6" runat="server" placeholder="Password Again" CssClass="rbuttons" TextMode="password" Width="294px"></asp:TextBox>
+        <asp:TextBox ID="TextBox6" runat="server" placeholder="Password Again" CssClass="rbuttons" TextMode="password" Width="294px" onkeyup="tSpeedValue(this)"></asp:TextBox>
         <br />
         <br />
+        
+
         <asp:Button ID="Button1" runat="server" Text="Register" CssClass="rbuttons2" Width="320px" OnClick="Button1_Click" />
         <br />
         
@@ -44,7 +70,7 @@
                 <br />
                   <br />
                 <br />
-                <asp:Label ID="Label1" runat="server" Text=" " CssClass="rlabels" ></asp:Label>
+                <asp:Label ID="Label1" runat="server" Text="" CssClass="rlabels" ></asp:Label>
                 <br />
                 
                   <br />
@@ -58,7 +84,7 @@
                 <br />
                 <br />
                 <br />
-                <asp:Label ID="Label2" runat="server" Text=" " CssClass="rlabels"></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text="" CssClass="rlabels"></asp:Label>
            
                 
             </div>

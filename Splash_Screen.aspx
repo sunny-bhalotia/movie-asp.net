@@ -14,7 +14,7 @@
       <form id="form1" runat="server">
           <div class="maindiv">
 
-              <asp:Label ID="Label1" runat="server" Text="Welcome to Movie Baazar" CssClass="labelcss" Font-Bold="true" ForeColor="White" Font-Size="80px"></asp:Label>
+              <asp:Label ID="Label1" runat="server" Text="Welcome to Movie Baazar" CssClass="labelcss" Font-Bold="true" ForeColor="Black" Font-Size="80px"></asp:Label>
                  <br />
               
                 <div class="div1">
