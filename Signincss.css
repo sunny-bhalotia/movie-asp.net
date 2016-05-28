@@ -1,0 +1,37 @@
+﻿.parent{
+    width:100%;
+
+}
+.child {
+    padding-top: 200px;
+    margin: 0px auto;
+    width: 25%;
+    padding-left: 40px;
+}
+#TextBox1,#TextBox2,#HyoerLink1{
+    width:200px;
+    height:40px;
+}
+
+#HyperLink1{
+    margin-left:25px;
+    color:black;
+}
+#Button1{
+    background-color:gray;
+    color:white;
+    border:dashed;
+    font-size:18px;
+    width:200px;
+    height:35px;
+}
+
+body{
+    
+    background-size:cover;
+}
+body{
+    background-image:url(loginimage.jpg);
+    background-size:cover;
+}
+ 

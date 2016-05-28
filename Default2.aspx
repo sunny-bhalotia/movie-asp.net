@@ -53,7 +53,7 @@
 }
         .headernew{
             margin:0px auto;
-            width:25%;
+            width:45%;
         }
 
         .headernewmain{
@@ -89,18 +89,28 @@
             border: 1px solid Gray;
             background-color: #fdd136;
                }
+
+        #Label1{
+            margin-left:20px;
+            font-size:16px;
+            font-family:'Open Sans';
+        }
         #AdRotator1 img
         {
            
-          height:700px !important;
+          height:620px !important;
           width:100% !important;
-          margin-left:5px;
-          margin-right:5px;
+        
         }
-        .auto-style1 {
-            width: 409px;
+        #Button2{
+            position:absolute;
+            left:1550px;
+            top:3%;
         }
 
+        #DropDownList1{
+            margin-left:25px;
+        }
     </style>
 </head>
 <body>
@@ -110,13 +120,16 @@
         <tr>
             <td>
         <h1>
-            Welcome to Movie Bazaar</h1>
+            Welcome to Movie Bazaar<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                <asp:Button ID="Button2" runat="server" Text="Sign Out" />
+                </h1>
+
                 </td>
             <td>
-                <asp:Button runat="server" CssClass="button1" BackColor="Transparent" BorderColor="SteelBlue" BorderWidth="1px"  Text="Sign Up"/>
+                <asp:Button ID="signinbutton" runat="server" CssClass="button1" BackColor="Transparent" BorderColor="SteelBlue" BorderWidth="1px"  Text="Sign In" OnClick="Unnamed_Click1"/>
             </td>
             <td>
-                <asp:Button runat="server" CssClass="button2" BackColor="Transparent" BorderColor="SteelBlue" BorderWidth="1px" Text="Sign In"/>
+                <asp:Button ID="signupbutton" runat="server" CssClass="button2" BackColor="Transparent" BorderColor="SteelBlue" BorderWidth="1px" Text="Sign Up" OnClick="Unnamed_Click"/>
             </td>
 
             </tr>
@@ -148,13 +161,18 @@
         <div class="headernewmain" >
     <div  class="headernew">
         <asp:TextBox ID="TextBox1" runat="server" Width="305px" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
-         <asp:Button ID="Button1" runat="server" Text="Search" />
+         <asp:Button ID="Button1" runat="server" Text="Search" OnClick="Button1_Click" />
+    
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Pubs %>" ProviderName="System.Data.SqlClient" SelectCommand="SELECT name FROM sys.columns WHERE object_id = OBJECT_ID('dbo.movie_db') and name<>'VOTES' and name<>'PLOT' and name<> 'AWARDS' and name<>'POSTER' and name<>'METASCORE' order by name"></asp:SqlDataSource>
+    
+        <asp:DropDownList ID="DropDownList1" runat="server" Width="200px" AutoPostBack="true" DataSourceID="SqlDataSource1" DataTextField="name" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+        </asp:DropDownList>
     
         </div>
         <div class="gridiv">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
   BorderWidth="1px" BackColor="White" CellPadding="3" BorderStyle="None" 
-  BorderColor="#CCCCCC" Font-Names="Arial" Height="693px" Width="100%">
+  BorderColor="#CCCCCC" Font-Names="Arial" Height="693px" Width="100%" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowCommand="GridView1_RowCommand">
 
             <FooterStyle ForeColor="#000066" BackColor="White"></FooterStyle>
     <PagerStyle ForeColor="#000066" HorizontalAlign="Left" 
@@ -167,13 +185,17 @@
             <ItemStyle HorizontalAlign="Center" 
               VerticalAlign="Middle" Font-Size="25px"> </ItemStyle>
         </asp:BoundField>
-        <asp:BoundField HeaderText="Languages" DataField="Language" ControlStyle-Width="250px" >
+        <asp:BoundField HeaderText="IMDB Rating" DataField="Rating" ControlStyle-Width="250px" >
             <ItemStyle HorizontalAlign="Center" Font-Size="25px" ></ItemStyle>
         </asp:BoundField>
 
         <asp:BoundField HeaderText="Release Date" DataField="Released" DataFormatString="{0:d}" >
             <ItemStyle HorizontalAlign="Center" Font-Size="25px"></ItemStyle>
         </asp:BoundField>
+
+        <asp:ButtonField AccessibleHeaderText="ID" DataTextField="ID">
+            <ItemStyle HorizontalAlign="Center" ForeColor="ForestGreen" />
+        </asp:ButtonField>
         
     </Columns>
     <SelectedRowStyle ForeColor="White" Font-Bold="True" 

@@ -1,0 +1,45 @@
+﻿.header
+{
+    width:100%;
+    height:50px;
+    margin:0px auto;
+}
+
+#Label1{
+    margin-top:20px;
+}
+
+.mainbody{
+    margin:0px auto;
+    width:100%;
+    height:100%;
+}
+
+#Image1{
+    position:absolute;
+    width:335px;
+    height:446px;
+    left:0px;
+    top: 65px;
+}
+
+.detailsbody{
+    position:absolute;
+    left:600px;
+}
+
+.detailsbody2{
+    position:absolute;
+    left:850px;
+}
+
+.footer{
+    position:absolute;
+    top:550px;
+    width:100%;
+}
+
+.ftitle{
+    width:25%;
+    margin:0px auto;
+}
