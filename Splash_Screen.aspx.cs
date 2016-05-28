@@ -15,9 +15,10 @@ public partial class Splash_Screen : System.Web.UI.Page
         PageBody.Attributes.Add("bgcolor", "gray");
         HtmlMeta meta = new HtmlMeta();
         meta.HttpEquiv = "Refresh";
-        meta.Content = "5;url=Default2.aspx";
+        meta.Content = "2;url=Default2.aspx";
         this.Page.Controls.Add(meta);
         
+
     }
 
     public void changecolor()

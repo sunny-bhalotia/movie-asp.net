@@ -6,6 +6,11 @@
 <head runat="server">
     
 <link href="SpashScreenCss.css" rel="stylesheet" />    
+    <script>
+  function preventBack(){window.history.forward();}
+  setTimeout("preventBack()", 0);
+  window.onunload=function(){null};
+</script>
     <title>
         
         Welcome to movie baazar
