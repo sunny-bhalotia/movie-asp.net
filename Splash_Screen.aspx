@@ -20,7 +20,7 @@
       <form id="form1" runat="server">
           <div class="maindiv">
 
-              <asp:Label ID="Label1" runat="server" Text="Welcome to Movie Baazar" CssClass="labelcss" Font-Bold="true" ForeColor="White" Font-Size="80px"></asp:Label>
+              <asp:Label ID="Label1" runat="server" Text="Movie Baazar" CssClass="labelcss" Font-Bold="true" ForeColor="White" Font-Size="80px"></asp:Label>
                  <br />           
                 <div class="div1">
                  <asp:ImageMap ID="ImageMap1" runat="server"  Height="720px" ImageAlign="AbsMiddle" ImageUrl="~/spgif.gif" Width="100%" AlternateText="Error" CssClass="image1">

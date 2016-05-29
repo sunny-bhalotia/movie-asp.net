@@ -15,7 +15,7 @@ public partial class Register : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         conString=WebConfigurationManager.ConnectionStrings["Pubs"].ConnectionString;
-         }
+    }
 
     protected void TextBox3_TextChanged(object sender, EventArgs e)
     {
@@ -41,7 +41,19 @@ public partial class Register : System.Web.UI.Page
         }
         catch (Exception err)
         {
-            if (err.ToString().Contains("PRIMARY")) { }
+            if (err.ToString().Contains("PRIMARY")) {
+
+                string message = "Username exists";
+                System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                sb.Append("<script type = 'text/javascript'>");
+                sb.Append("window.onload=function(){");
+                sb.Append("alert('");
+                sb.Append(message);
+                sb.Append("')};");
+                sb.Append("</script>");
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", sb.ToString());
+
+            }
             else { }
             
         }

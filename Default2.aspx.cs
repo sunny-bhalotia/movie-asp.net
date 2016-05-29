@@ -17,6 +17,7 @@ public partial class Default2 : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         GridView1.GridLines = GridLines.None;
+
         if (Session["userName"] != null)
         {
             username = (Session["userName"].ToString());
@@ -120,6 +121,13 @@ public partial class Default2 : System.Web.UI.Page
         String n = row.Cells[1].Text.ToString();
         Session["moviename"] = n;
         Server.Transfer("Movie_Details.aspx");
+    }
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        Session["userName"] = null;
+        Server.Transfer("Default2.aspx");
+       
     }
 }
 

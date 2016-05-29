@@ -64,14 +64,63 @@
         {
             position:absolute;
             left:1380px;
-            top:3%;
-        }
+            top:1%;
 
+            -moz-box-shadow: 0px 10px 14px -7px #3e7327;
+	-webkit-box-shadow: 0px 10px 14px -7px #3e7327;
+	box-shadow: 0px 10px 14px -7px #3e7327;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
+	background:-moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352',GradientType=0);
+	background-color:#77b55a;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius:7px;
+	border:2px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:11px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+        }
         .button2
         {
-            position:absolute;
-            left:1460px;
-            top:3%;
+        position:absolute;
+            left:1500px;
+            top:1%;
+
+            -moz-box-shadow: 0px 10px 14px -7px #3e7327;
+	-webkit-box-shadow: 0px 10px 14px -7px #3e7327;
+	box-shadow: 0px 10px 14px -7px #3e7327;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
+	background:-moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352',GradientType=0);
+	background-color:#77b55a;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius:7px;
+	border:2px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:11px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
         }
 
 
@@ -91,21 +140,45 @@
                }
 
         #Label1{
-            margin-left:20px;
+            margin-left:30px;
             font-size:16px;
             font-family:'Open Sans';
         }
         #AdRotator1 img
         {
            
-          height:620px !important;
+          height:720px !important;
           width:100% !important;
         
         }
         #Button2{
             position:absolute;
-            left:1550px;
-            top:3%;
+            left:1620px;
+            top:1%;
+    -moz-box-shadow: 0px 10px 14px -7px #9fb4f2;
+	-webkit-box-shadow: 0px 10px 14px -7px #9fb4f2;
+	box-shadow: 0px 10px 14px -7px #9fb4f2;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7892c2), color-stop(1, #476e9e));
+	background:-moz-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-webkit-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-o-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-ms-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e',GradientType=0);
+	background-color:#7892c2;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius:7px;
+	border:2px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:11px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
         }
 
         #DropDownList1{
@@ -121,7 +194,7 @@
             <td>
         <h1>
             Welcome to Movie Bazaar<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-                <asp:Button ID="Button2" runat="server" Text="Sign Out" />
+                <asp:Button ID="Button2" runat="server" Text="Sign Out" OnClick="Button2_Click" />
                 </h1>
 
                 </td>
@@ -135,6 +208,8 @@
             </tr>
         
         </table>
+
+
         </div>
 
         <br />

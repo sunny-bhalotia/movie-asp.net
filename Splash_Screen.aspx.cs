@@ -8,8 +8,11 @@ using System.Web.UI.WebControls;
 using System.Threading;
 
 using System.Collections;
+using System.Media;
+
 public partial class Splash_Screen : System.Web.UI.Page
 {
+
     protected void Page_Load(object sender, EventArgs e)
     {
         PageBody.Attributes.Add("bgcolor", "gray");
@@ -17,13 +20,9 @@ public partial class Splash_Screen : System.Web.UI.Page
         meta.HttpEquiv = "Refresh";
         meta.Content = "2;url=Default2.aspx";
         this.Page.Controls.Add(meta);
-        
 
-    }
 
-    public void changecolor()
-    {
-            Label1.ForeColor = System.Drawing.Color.Red;
-            
+
+
     }
 }

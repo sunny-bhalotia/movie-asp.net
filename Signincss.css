@@ -14,9 +14,11 @@
 }
 
 #HyperLink1{
-    margin-left:25px;
+    margin-left:10px;
     color:black;
 }
+
+
 #Button1{
     background-color:gray;
     color:white;
@@ -34,4 +36,5 @@ body{
     background-image:url(loginimage.jpg);
     background-size:cover;
 }
+
  

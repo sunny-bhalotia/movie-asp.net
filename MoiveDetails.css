@@ -1,45 +1,99 @@
-﻿.header
-{
-    width:100%;
-    height:50px;
-    margin:0px auto;
-}
-
-#Label1{
-    margin-top:20px;
-}
-
-.mainbody{
-    margin:0px auto;
-    width:100%;
-    height:100%;
-}
-
-#Image1{
+﻿#Image1{
     position:absolute;
-    width:335px;
-    height:446px;
+    width:450px;
+    height:600px;
     left:0px;
     top: 65px;
 }
 
-.detailsbody{
-    position:absolute;
-    left:600px;
+#Image1{
+    border:solid;
+    border-color:white;
+    border-width:15px;   
+     box-shadow: 10px 10px 5px #888888;
+     -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
 }
 
-.detailsbody2{
+.maindiv{
     position:absolute;
-    left:850px;
+    left:789px;
+    top:76px;
+    width:42%;
+    height:800px;
+    background-color:peru;
+    border-color:white;
+    border-width:15px;   
+     box-shadow: 10px 10px 5px #888888;
+    
 }
 
-.footer{
-    position:absolute;
-    top:550px;
-    width:100%;
+body{
+    background-color:bisque;
 }
 
-.ftitle{
-    width:25%;
-    margin:0px auto;
+.labeltext{
+    font-family:Calibri;
+    font-size:28px;
+    font-weight:bolder;
+    
+    color:bisque;
+}
+
+.detailstext{
+    word-wrap:break-word;
+    margin-left:15px;
+    font-size:21px;
+    font-weight:bold;
+    color:white;
+}
+
+#GridView1{
+   width:100%;
+}
+
+.gridiv1{
+    position:absolute;
+    top:920px;
+    left:-17px;
+    width: 100%;
+}
+
+#TextArea1{
+    margin-top:70px;
+    width:75%;
+    font-size:16px;
+    margin-left:20px;
+}
+
+#Button1{
+    margin:10px;
+    position:absolute;
+    left:800px;
+
+ -moz-box-shadow: 0px 10px 14px -7px #9fb4f2;
+	-webkit-box-shadow: 0px 10px 14px -7px #9fb4f2;
+	box-shadow: 0px 10px 14px -7px #9fb4f2;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7892c2), color-stop(1, #476e9e));
+	background:-moz-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-webkit-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-o-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-ms-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e',GradientType=0);
+	background-color:#7892c2;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius:7px;
+	border:2px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:11px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
 }
