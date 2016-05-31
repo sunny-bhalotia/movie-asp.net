@@ -5,7 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link href="RegisterCSS.css" rel="stylesheet" />
-    <title></title>
+      <title>Movie Baazar</title>
+                <link runat="server" rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+                <link runat="server" rel="icon" href="favicon.ico" type="image/ico"/>
+
 </head>
 
     <script type="text/javascript">

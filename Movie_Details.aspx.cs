@@ -19,11 +19,11 @@ public partial class Movie_Details : System.Web.UI.Page
     {
         conString = WebConfigurationManager.ConnectionStrings["Pubs"].ConnectionString;
 
-        if (Session["moviename"]!=null)
-        moviename=(Session["moviename"].ToString());
+        if (Session["moviename"] != null)
+            moviename = (Session["moviename"].ToString());
         Label2.Text = moviename;
 
-        String query = "select rated,runtime,awards,plot,poster,id from movie_db where title='"+moviename+"'";
+        String query = "select rated,runtime,awards,plot,poster,id from movie_db where title='" + moviename + "'";
         SqlConnection con = new SqlConnection(conString);
 
         SqlDataReader reader;
@@ -69,21 +69,23 @@ public partial class Movie_Details : System.Web.UI.Page
                 con.Close();
             }
         }
-    
-    GridView1.DataSource = table;
+
+        GridView1.DataSource = table;
 
         GridView1.DataBind();
 
 
-        
+
     }
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        
-        if (Session["userName"]==null)
+
+       String p=(Request.Form["Label11"]);
+
+        if (Session["userName"] == null)
         {
-           
+
             string message = "Please Sign in to give your opinion"+p;
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
             sb.Append("<script type = 'text/javascript'>");
@@ -96,6 +98,19 @@ public partial class Movie_Details : System.Web.UI.Page
         }
         else
         {
+            Random ran = new Random();
+            int ra = ran.Next(6, 9);
+
+            
+            String insert_Query = "insert into opinion values(@us,@fi,@la,@gm)";
+            SqlConnection con = new SqlConnection(conString);
+            SqlCommand cmd = new SqlCommand(insert_Query, con);
+            cmd.Parameters.AddWithValue("@us", Session["userName"].ToString());
+            cmd.Parameters.AddWithValue("@fi", id);
+            cmd.Parameters.AddWithValue("@la",ra);
+            cmd.Parameters.AddWithValue("@gm", Request.Form["TextArea1"].ToString()+"");
+
+            
             string message = "Thank you for your valuable opinion.";
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
             sb.Append("<script type = 'text/javascript'>");
@@ -107,14 +122,6 @@ public partial class Movie_Details : System.Web.UI.Page
             ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", sb.ToString());
 
 
-
-            String insert_Query = "insert into opinion values(@us,@fi,@la,@gm)";
-            SqlConnection con = new SqlConnection(conString);
-            SqlCommand cmd = new SqlCommand(insert_Query, con);
-            cmd.Parameters.AddWithValue("@us", Session["userName"].ToString());
-            cmd.Parameters.AddWithValue("@fi", id);
-            cmd.Parameters.AddWithValue("@la", ' ');
-            cmd.Parameters.AddWithValue("@gm", Request.Form["TextArea1"].ToString(););
             try
             {
                 con.Open();
@@ -122,9 +129,8 @@ public partial class Movie_Details : System.Web.UI.Page
             }
             catch (Exception err)
             {
-                if (err.ToString().Contains("PRIMARY")) { }
-                else { }
 
+                Label11.Text = err.ToString();
             }
             finally
             {

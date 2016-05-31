@@ -5,7 +5,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <link href="MoiveDetails.css" rel="stylesheet" />
-    <title></title>
+      <title>Movie Baazar</title>
+                <link runat="server" rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+                <link runat="server" rel="icon" href="favicon.ico" type="image/ico"/>
+
+
+     <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="rating.js"></script>
+    <link rel="stylesheet" type="text/css" href="rating.css" />
+    <script type="text/javascript">
+        $(function ()
+        {
+            $('.rating').rating();
+
+            $('.ratingEvent').rating({ rateEnd: function (v) { $('#result').text(v);  } });
+        });
+    </script>
 </head>
 
 <body>
@@ -79,12 +94,17 @@
 
         </asp:GridView>
             <br />
-            <textarea id="TextArea1" name="TextArea1" cols="20" rows="4"></textarea>
+            <div class="stardiv"><textarea id="TextArea1" name="TextArea1" cols="25" rows="4"></textarea>
+           
+    <input type="text" class="rating rating10" id="startext"/>
+                </div>
+            
+    <br />
             <br />
 
             <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
 
-
+            <asp:Label ID="Label11" runat="server" name = "Label11" ></asp:Label>
 
             <asp:Panel id="MovingContent" runat="server"
      style="position:absolute;font-weight:bold;font-size:20px;left:-100px;top:20px;height:40px;width:500px;">
@@ -111,7 +131,7 @@ function move(){
   divElement.style.top = posY + 'px';
 
   //Time in milliseconds to when to move next step
-  self.setTimeout('move()', 100); 
+  self.setTimeout('move()', 100);  
 
  }
 }

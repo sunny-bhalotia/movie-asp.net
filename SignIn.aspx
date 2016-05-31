@@ -4,10 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+      <title>Movie Baazar</title>
+                <link runat="server" rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+                <link runat="server" rel="icon" href="favicon.ico" type="image/ico"/>
+
     <link href="Signincss.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
-    <link href="normalize.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">

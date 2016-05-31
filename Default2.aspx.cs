@@ -125,8 +125,10 @@ public partial class Default2 : System.Web.UI.Page
 
     protected void Button2_Click(object sender, EventArgs e)
     {
+        Label1.Text = "";
         Session["userName"] = null;
         Server.Transfer("Default2.aspx");
+
        
     }
 }
